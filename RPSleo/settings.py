@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accueil',                          #ajout de l'appli de page d'accueil
     'compte',
+    'game',
+    'user',
 ]
 
 MIDDLEWARE = [

@@ -15,18 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
-from accueil import views
-from compte import views as views2
+from accueil import views as views_accueil
+from compte import views as views_compte
+from game import views as views_game
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home,			#vue de la homepage
+    url(r'^$', views_accueil.home,			#vue de la homepage
     name="accueil"),
-    url(r'^partie$', views.view_all_game,  # Vue de 50 parties
+    url(r'^partie$', views_game.view_all_game,  # Vue de 50 parties
     name="all_game"),
-    url(r'^partie/(\d+)$', views.view_game,  # Vue d'une partie
+    url(r'^partie/(\d+)$', views_game.view_game,  # Vue d'une partie
     name="game"),
-    url(r'^compte$',views2.compte,
+    url(r'^compte$',views_compte.compte,
     name="compte"),
 ]
