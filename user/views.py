@@ -5,8 +5,10 @@ from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
 
-def liste_users(request):
-	#renvoie la date .... uselesss.fo, pour tester
+
+## renvoie la liste des users
+def recherche(request):
 
     user = User.objects.all()
-    return render(request, 'accueil/users.html', {'liste_user': user})
+    return render(request, 'user/users.html', {'liste_user': user})
+

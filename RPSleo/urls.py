@@ -18,6 +18,7 @@ from django.conf.urls import url
 from accueil import views as views_accueil
 from compte import views as views_compte
 from game import views as views_game
+from user import views as views_user
 
 
 urlpatterns = [
@@ -30,4 +31,6 @@ urlpatterns = [
     name="game"),
     url(r'^compte$',views_compte.compte,
     name="compte"),
+    url(r'^recherche$',views_user.recherche,
+    name="recherche"),
 ]
