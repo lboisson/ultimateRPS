@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from accueil import views
+from compte import views as views2
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),		
+    url(r'^admin/', admin.site.urls),
     url(r'^$', views.home,			#vue de la homepage
     name="accueil"),
     url(r'^partie$', views.view_all_game,  # Vue de 50 parties
@@ -30,4 +31,6 @@ urlpatterns = [
     name="github"),
     url(r'^date$', views.date_actuelle,
     name="date"),
+    url(r'^compte$',views2.compte,
+    name="compte"),
 ]
