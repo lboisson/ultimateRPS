@@ -27,10 +27,6 @@ urlpatterns = [
     name="all_game"),
     url(r'^partie/(\d+)$', views.view_game,  # Vue d'une partie
     name="game"),
-    url(r'^github$', views.github,			#redirige sur notre git, aucun interet
-    name="github"),
-    url(r'^date$', views.date_actuelle,
-    name="date"),
     url(r'^compte$',views2.compte,
     name="compte"),
 ]
