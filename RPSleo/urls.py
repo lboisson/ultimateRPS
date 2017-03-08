@@ -16,14 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from accueil import views
+from compte import views as views2
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),		
+    url(r'^admin/', admin.site.urls),
     url(r'^$', views.home,			#vue de la homepage
     name="accueil"),
     url(r'^partie$', views.view_all_game,  # Vue de 50 parties
     name="all_game"),
     url(r'^partie/(\d+)$', views.view_game,  # Vue d'une partie
     name="game"),
+    url(r'^compte$',views2.compte,
+    name="compte"),
 ]
