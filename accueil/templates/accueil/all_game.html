@@ -5,8 +5,9 @@
 
 	{% for partie in dernieres_parties %}
 	    <div>
-	    	<h3>{{ partie.PlayerOne.PlayerName }} VERSUS 
-	    		{{ partie.PlayerOne.PlayerName}}</h3>
+	    	<h3>{{ partie.PlayerOne.username }} : {{partie.PlayerOneHand}} VERSUS 
+	    		{{ partie.PlayerTwo.username }} : {{partie.PlayerTwoHand}} </h3>
+
 
 	    </div>
 	{% empty %}

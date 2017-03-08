@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+     <link rel="stylesheet" href="static/css/style.css" />
+     <title>{% block title %}SUPER RPS{% endblock %}</title>
+  </head>
+
+  <body>
+
+    <div class="titre">
+      <a href="/"
+        <h1> SUPER RPS</h1>
+      </a>
+    </div>
+
+    <nav>
+       {% block nav %}
+        <div class="navbar">
+          <ul class="onglet">
+            <li><a href="/partie">PARTIES</a></li>
+            <li><a href="/date">COMPTE</a></li>
+            <li><a href="/compte">NOTIFICATIONS</a></li>
+            <li><a href="/compte">RECHERCHE</a></li>
+          </ul>
+        </div>
+       {% endblock %}
+   </nav>
+
+   <section id="content" class="corps">
+       {% block content %}{% endblock %}
+   </section>
+  </body>
+</html>
