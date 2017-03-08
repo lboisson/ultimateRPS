@@ -8,7 +8,7 @@
     <!-- Cette déclaration concerne les mobiles. Elle demande que l'affichage occupe tout l'espace dispo. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- On appelle le css -->
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static "/css/bootstrap.min.css" %}" rel="stylesheet">
     <title>{% block title %}SUPER RPS{% endblock %}</title>
   </head>
 
@@ -30,6 +30,7 @@
             <li role="presentation"><a href="/compte">COMPTE</a></li>
             <li role="presentation"><a href="/notifications">NOTIFICATIONS</a></li>
             <li role="presentation"><a href="/recherche">RECHERCHE</a></li>
+            <li role="presentation"><a href="/partie">PARTIES</a></li>
           </ul>
         </div>
       </div>

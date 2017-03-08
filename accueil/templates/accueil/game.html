@@ -1,8 +1,12 @@
-{% extends "accueil/base.html" %}
+{% extends "base.html" %}
 {% block title %}SUPER-RPS{% endblock %}
 {% block content %}
 
-	<h1>TEST</h1>
-		<p>Résumé de la partie {{ id_game}} !"</p>
+		<h1>Résumé de la partie {{ partie }} !"</h1>
+
+		<div>
+			<h3>{{ partie.PlayerOne.username }} : {{partie.PlayerOneHand}} VERSUS
+				{{ partie.PlayerTwo.username }} : {{partie.PlayerTwoHand}} </h3>
+		</div>
 
 {%endblock%}

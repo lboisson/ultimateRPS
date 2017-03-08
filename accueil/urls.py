@@ -2,7 +2,7 @@ from django.conf.urls import url
 from . import views
 
 #url des pages de l'app accueil
-urlpatterns = [ 
+urlpatterns = [
    url(r'^$', views.home,			#vue de la homepage
     name="accueil"),
 
@@ -11,5 +11,8 @@ urlpatterns = [
 
     url(r'^partie/(\d+)$', views.view_game,  # Vue d'une partie
     name="game"),
-    
+
+    url(r'^notfound', views.notfound,  #si la partie n existe pas
+    name="notfound"),
+
 ]
