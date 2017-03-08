@@ -1,11 +1,11 @@
-{% extends "accueil/base.html" %}
+{% extends "base.html" %}
 {% block title %}SUPER-RPS{% endblock %}
 {% block content %}
 
 
 	{% for partie in dernieres_parties %}
 	    <div>
-	    	<h3>{{ partie.PlayerOne.username }} : {{partie.PlayerOneHand}} VERSUS 
+	    	<h3>{{ partie.PlayerOne.username }} : {{partie.PlayerOneHand}} VERSUS
 	    		{{ partie.PlayerTwo.username }} : {{partie.PlayerTwoHand}} </h3>
 
 
