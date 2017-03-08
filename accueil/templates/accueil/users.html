@@ -1,0 +1,14 @@
+{% extends "accueil/base.html" %}
+{% block title %}SUPER-RPS{% endblock %}
+{% block content %}
+
+	{% for user in liste_user %}
+	    <div>
+	    	<h3>{{ user.username }}</h3>
+
+	    </div>
+	{% empty %}
+	    <p>pas d'users</p>
+	{% endfor %}
+
+{%endblock%}
