@@ -2,8 +2,9 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import redirect
 from django.shortcuts import render
 from datetime import datetime
-from accueil.models import Player
+from django.db import models
 from accueil.models import Game
+from django.contrib.auth.models import User
 
 
 def home(request):
@@ -12,9 +13,8 @@ def home(request):
 
 def view_all_game(request):
     #affiche la liste de tous les jeux 
-    parties = Player.objects.all() #selectionne toutes les parties
-    return render(request, 'accueil/all_game.html', {'derniere_parties' : parties})    
-
+    parties = Game.objects.all() #selectionne toutes les parties
+    return render(request, 'accueil/all_game.html', {'dernieres_parties' : parties})    
 
 def view_game(request, id_game):
     
@@ -27,12 +27,8 @@ def view_game(request, id_game):
 
     return render(request, 'accueil/game.html', {'id_game': id_game})
 
-
-def github(request):
-    #redirige vers github (aucun interet, c'est pour tester la fonction)
-    return redirect('https://github.com/lboisson/ultimateRPS')
-
-
-def date_actuelle(request):
+def liste_users(request):
 	#renvoie la date .... useless, pour tester
-    return render(request, 'accueil/date.html', {'date': datetime.now()})
+
+    user = User.objects.all() 
+    return render(request, 'accueil/users.html', {'liste_user': user})
