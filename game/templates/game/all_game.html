@@ -5,13 +5,13 @@
 
 	{% for partie in dernieres_parties %}
 	    <div>
-	    	<h3>{{ partie.PlayerOne.username }} : {{partie.PlayerOneHand}} VERSUS
-	    		{{ partie.PlayerTwo.username }} : {{partie.PlayerTwoHand}} </h3>
+	    	<h3>{{ partie.Creator.username }} : {{partie.CreatorHand}} VERSUS
+	    		{{ partie.Opponent.username }} : {{partie.OpponentHand}} </h3>
 	    	<h1>WINNER : 
-	    	{% if not partie.Outcome %}
+	    	{% if not partie.Winner %}
 	    		Pas encore de vainqueur
 	    	{% else %}
-	    	{{ partie.Outcome }}
+	    	{{ partie.Winner }}
 
 	    	{% endif %}
 
