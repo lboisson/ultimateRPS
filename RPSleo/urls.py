@@ -19,7 +19,7 @@ from accueil import views as views_accueil
 from compte import views as views_compte
 from game import views as views_game
 from user import views as views_user
-
+from . import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -33,4 +33,6 @@ urlpatterns = [
     name="compte"),
     url(r'^recherche$',views_user.recherche,
     name="recherche"),
+    url(r'^connexion$', views.connexion,
+    name='connexion'),
 ]
