@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}SUPER-RPS{% endblock %}
+{% block title %}UltimateRPS{% endblock %}
 {% block content %}
 
 
@@ -7,7 +7,7 @@
 	    <div>
 	    	<h3>{{ partie.PlayerOne.username }} : {{partie.PlayerOneHand}} VERSUS
 	    		{{ partie.PlayerTwo.username }} : {{partie.PlayerTwoHand}} </h3>
-	    	<h1>WINNER : 
+	    	<h1>WINNER :
 	    	{% if not partie.Outcome %}
 	    		Pas encore de vainqueur
 	    	{% else %}
