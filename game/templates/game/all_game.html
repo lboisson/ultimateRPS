@@ -3,21 +3,24 @@
 {% block content %}
 
 
-	{% for partie in dernieres_parties %}
-	    <div>
-	    	<h3>{{ partie.Creator.username }} : {{partie.CreatorHand}} VERSUS
-	    		{{ partie.Opponent.username }} : {{partie.OpponentHand}} </h3>
-	    	<h1>WINNER : 
-	    	{% if not partie.Winner %}
-	    		Pas encore de vainqueur
-	    	{% else %}
-	    	{{ partie.Winner }}
+	<div class = btn-group>
+		{% for partie in dernieres_parties %}
+			<h3>
+				{{ partie.Creator.username }} : {{partie.CreatorHand}} VERSUS
+				{{ partie.Opponent.username }} : {{partie.OpponentHand}} 
+			</h3>
+			<h1>
+				WINNER : 
+				{% if not partie.Winner %}
+					Pas encore de vainqueur
+				{% else %}
+					{{ partie.Winner }}
+				{% endif %}
+			</h1>
 
-	    	{% endif %}
-
-	    </div>
-	{% empty %}
-	    <p>Aucune partie</p>
-	{% endfor %}
+		{% empty %}
+		<p>Aucune partie</p>
+		{% endfor %}
+	</div>
 
 {%endblock%}
