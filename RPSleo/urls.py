@@ -24,7 +24,6 @@ from user import views as views_user
 from inscription.views import *
 from connexion.views import *
 
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views_accueil.home,			#vue de la homepage
