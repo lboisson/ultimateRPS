@@ -4,4 +4,4 @@ from inscription.models import User
 
 def inscription(request):
     form = UserCreationForm()
-    return render(request, 'base.html', {'form':form})
+    return render(request, 'inscription.html', {'form':form},{'redirect_field_name':'/'})

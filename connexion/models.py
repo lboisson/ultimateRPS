@@ -5,6 +5,6 @@ from django import forms
 
 class AuthentificationForm(forms.ModelForm):
 
-    class Meta:
-        model = User
-        fields = ['username', 'password']
+	class Meta:
+		model = User
+		fields = ['username', 'password']
