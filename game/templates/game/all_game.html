@@ -2,12 +2,13 @@
 {% block title %}UltimateRPS{% endblock %}
 {% block content %}
 
+	<div class="row", style="padding-bottom: 100px;">
+			<div  class ="col-md-6 col-md-offset-3 top100" style="background-color: #FFFF33;border-radius: 25px;">
 
 
 	{% for partie in dernieres_parties %}
 		{% if not forloop.last %}
-			<div class="row", style="padding-bottom: 100px;">
-			<div  class ="col-md-6 col-md-offset-3 top100" style="background-color: #FFFF33;border-radius: 25px;">
+			
 		{% endif %}
 			
 				<h3>
