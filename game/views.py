@@ -10,7 +10,7 @@ from game.models import Game
 def view_all_game(request):
     #affiche la liste de tous les jeux
     parties = Game.objects.all() #selectionne toutes les parties
-    return render(request, 'game/all_game.html', {'dernieres_parties' : parties})
+    return render(request, 'game/all_game.html', {'liste_parties' : parties})
 
 def view_game(request, id_game):
 

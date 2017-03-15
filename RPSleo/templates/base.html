@@ -17,12 +17,25 @@
 <!-- Menu du haut -->
   <body>
     <nav class="navbar navbar-default">
+
       <div class="container-fluid">
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
         {% if user.is_authenticated %}
-          {{ user.username }} !
+          <div class="dropdown-container">
+            <button class="navbar-left btn btn-default navbar-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+               {{ user.username }}
+              <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="/">Notifications</a></li>    
+              <li role="separator" class="divider"></li>
+              <li><a href="/compte">Mon compte</a></li>
+            </ul>
+          </div>
+          
         {% else %}
           <ul class="nav navbar-nav">
             <!-- <button type="button" class="btn btn-info btn-l" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
@@ -34,7 +47,7 @@
           </ul>
         {% endif %}
         <div class=""><span class="pull-right">
-          <form class="navbar-form navbar-left">
+          <form class="navbar-form navbar-right">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Recherche">
             </div>
@@ -42,6 +55,7 @@
           </form>
         </span></div>
       </div><!-- /.container-fluid -->
+
     </nav>
 
     <div class="page-header text-center">
@@ -50,18 +64,19 @@
 
     </div>
 
+
     <div class="container">
-       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+      <div class="row">
+        <div class="col-sm-4 col-md-6 col-sm-offset-3 col-md-offset-3">
           <ul class="nav nav-pills nav-justified">
-            <li role="presentation"><a href="/">ACCUEIL</a></li>
-            <li role="presentation"><a href="/compte">COMPTE</a></li>
-            <li role="presentation"><a href="/recherche">AMIGOS</a></li>
-            <li role="presentation"><a href="/partie">PARTIES</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="/">ACCUEIL</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="/recherche">AMIGOS</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="/partie">PARTIES</a></li>
           </ul>
         </div>
       </div>
     </div>
+
 
     <!-- Trigger the modal with a button -->
 <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
@@ -160,7 +175,7 @@
 
   <!-- Contenu de la page -->
    <div class="container">
-     <div class="col-md-10 col-md-offset-1">
+     <div class="col-xs-6 col-xs-offset-3">
        {% block content %}{% endblock %}
      </div>
    </div>
