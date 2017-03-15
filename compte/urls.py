@@ -5,4 +5,6 @@ from . import views
 urlpatterns = [
    url(r'^$', views.compte,
     name="compte"),
+    url(r'^notifications', views.notifications, 
+    name="notifications"),
 ]
