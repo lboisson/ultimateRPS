@@ -9,9 +9,9 @@
 				
 			<div class = "row" style ="padding-top : 10px"></div>
 
-			<div class="row", style="background-color: #FFFF33;border-radius: 25px;">
+			<div class="row", style="{% cycle 'background-color: #FFFF33;border-radius: 25px;' 'background-color: #66FF33;border-radius: 25px;' 'background-color: #F84533;border-radius: 25px;' 'background-color: #33CCFF;border-radius: 25px;' %}">
 				<div class="col-xs-8 col-xs-offset-2">
-					<p class="text-center">
+					<h4 class="text-center">
 						{{ partie.Creator.username }} : {{partie.CreatorHand}} VERSUS
 						{{ partie.Opponent.username }} : {{partie.OpponentHand}} 
 						<br>
@@ -21,7 +21,7 @@
 						{% else %}
 							{{ partie.Winner }}
 						{% endif %}
-					</p>
+					</h4>
 
 				</div>
 			</div>
@@ -34,6 +34,5 @@
 
 		{% endfor %}	
 
-	</div>
 
 {%endblock%}
