@@ -38,6 +38,7 @@ urlpatterns = [
     name="compte"),
     url(r'^recherche$',views_user.recherche,
     name="recherche"),
-	url(r'^inscription/', inscription, name='inscription'), #Inscription
+	url(r'^inscription/$', inscription, name='inscription'), #Inscription
 	url('^', include('django.contrib.auth.urls')), #Pour connexion et déconnexion principalement
+    url(r'^logout/$', deconnexion)
 ]

@@ -6,13 +6,6 @@
 <p>Votre login et mot de passe ne correspondent pas. Veuillez réessayer.</p>
 {% endif %}
 
-{% if next %}
-    {% if user.is_authenticated %}
-    <p>Vous ne pouvez pas accéder à cette page. Il vous faut un compte.</p>
-    {% else %}
-    <p>Connectez vous pour accéder à cette page.</p>
-    {% endif %}
-{% endif %}
 
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}

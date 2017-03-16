@@ -6,7 +6,7 @@
 <p> Il y a un problème avec votre login et/ou votre mot de passe.</p>
 {% endif %}
 
-<form action="{%url 'inscription'%}" method="post">
+<form method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="S'inscrire" />
