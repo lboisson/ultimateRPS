@@ -3,12 +3,30 @@
 {% block content %}
 
 	{% for user in liste_user %}
-	    <div>
-	    	<h3>{{ user.username }}</h3>
+	    <div class = "row" style ="padding-top : 10px"></div>
 
-	    </div>
+			<div class="row", style="background-color: #66FF33;border-radius: 25px;">
+				<div class="col-xs-8 col-xs-offset-2">
+					<h3 class="text-center">
+						{{ user.username }}
+					</h3>
+					<div class="btn-group-justified  btn-group-m  responsive-width">
+					    <a class="btn btn-default" href="#">PIERRE</a>
+					    <a class="btn btn-default" href="#">FEUILLE</a>
+					    <a class="btn btn-default" href="#">CISEAUX</a>
+					</div>
+
+				</div>
+			</div>
+			
 	{% empty %}
 	    <p>pas d'users</p>
 	{% endfor %}
 
 {%endblock%}
+
+
+
+		
+			
+				

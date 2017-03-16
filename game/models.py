@@ -26,11 +26,11 @@ class Game(models.Model):
 		User, related_name='winner', null=True, blank=True)
 
 	# dates
-	completed = models.DateTimeField(
+	Completed = models.DateTimeField(
 		null=True, blank=True)
-	created = models.DateTimeField(
+	Created = models.DateTimeField(
 		auto_now_add=True)
-	modified = models.DateTimeField(
+	Modified = models.DateTimeField(
 		auto_now=True)
 
 	def __str__(self):

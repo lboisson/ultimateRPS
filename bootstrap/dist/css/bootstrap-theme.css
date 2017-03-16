@@ -4,6 +4,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
  
+.responsive-width {
+    font-size: 3vw;
+}
+ 
 html {
     overflow-y: scroll;
 }

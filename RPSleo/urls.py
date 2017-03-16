@@ -32,6 +32,8 @@ urlpatterns = [
     name="all_game"),
     url(r'^partie/(\d+)$', views_game.view_game,  # Vue d'une partie
     name="game"),
+    url(r'^notifications$', views_compte.notifications,  # Vue de 50 parties
+    name="notifications"),
     url(r'^compte$',views_compte.compte,
     name="compte"),
     url(r'^recherche$',views_user.recherche,
