@@ -1,1 +1,6 @@
-<h1> UltimateRPS </h1>
+#UltimateRPS
+
+##Les membres du projets sont :
+*Leo Boisson
+*Keryann Bussereau
+*Alizee Duran
