@@ -1,6 +1,6 @@
-#UltimateRPS
+# UltimateRPS
 
-##Les membres du projets sont :
-*Leo Boisson
-*Keryann Bussereau
-*Alizee Duran
+## Les membres du projets sont :
+* Leo Boisson
+* Keryann Bussereau
+* Alizee Duran
