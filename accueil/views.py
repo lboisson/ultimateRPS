@@ -11,9 +11,11 @@ from game.models import Game
 
 def home(request):
 	if request.user.is_authenticated():
-		parties = Game.objects.filter(Creator=request.user) | Game.objects.filter(Opponent=request.user) 
+		parties = Game.objects.filter(Creator=request.user) | Game.objects.filter(Opponent=request.user)
 		return render(request, 'accueil/home.html', {'liste_parties' : parties})
 
 	else :
-		form = AuthentificationForm()
-		return render(request, 'registration/login.html', {'form':form}, {'redirect_field_name':'/'})
+		return render(request, 'accueil/home.html')
+	# else :
+	# 	form = AuthentificationForm()
+	# 	return render(request, 'registration/login.html', {'form':form}, {'redirect_field_name':'/'})

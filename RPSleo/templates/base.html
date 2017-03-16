@@ -21,7 +21,6 @@
       <div class="container-fluid">
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-      
         {% if user.is_authenticated %}
           <div class="dropdown-container">
             <button class="navbar-left btn btn-default navbar-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -30,21 +29,23 @@
             </button>
 
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="/notifications">Notifications</a></li>    
-              <li><a href="/compte">Compte</a></li>  
+              <li><a href="/notifications">Notifications</a></li>
+              <li><a href="/compte">Compte</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="/Deconnexion">Deconnexion</a></li>
+              <li><a href="/logout">Deconnexion</a></li>
             </ul>
           </div>
-          
+
         {% else %}
           <ul class="nav navbar-nav">
             <!-- <button type="button" class="btn btn-info btn-l" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
-            <li><a data-toggle="modal" data-target="#myModal">Connexion <span class="sr-only">(current)</span></a></li>
+            <!-- <li><a data-toggle="modal" data-target="#myModal">Connexion <span class="sr-only">(current)</span></a></li> -->
+            <li><a href="/login">Connexion <span class="sr-only">(current)</span></a></li>
           </ul>
 
           <ul class="nav navbar-nav">
-            <li><a data-toggle="modal" data-target="#Inscription">Inscription <span class="sr-only">(current)</span></a></li>
+            <!-- <li><a data-toggle="modal" data-target="#Inscription">Inscription <span class="sr-only">(current)</span></a></li> -->
+            <li><a href="/inscription">Inscription <span class="sr-only">(current)</span></a></li>
           </ul>
         {% endif %}
         <div class=""><span class="pull-right">
@@ -113,9 +114,6 @@
             <div class="form-group">
               <label for="pwd">Mot de passe :</label>
               <input type="password" class="form-control" id="pwd">
-            </div>
-            <div class="checkbox">
-              <label><input type="checkbox"> Rester connecté</label>
             </div>
             <button type="submit" class="btn btn-default">Connexion</button>
           </form>
