@@ -1,7 +1,7 @@
 # UltimateRPS
 
 ## But du projet :
-Le but de ce projet est d'apprendre à utiliser Django et Bootstrap.
+Ce projet a pour objectif de nous apprendre à utiliser Django et Bootstrap.
 Pour cela, nous réalisons un "réseau social" de pierre feuille ciseaux.
 
 Le but de ce site est de pouvoir défier ses amis à un pierre feuille ciseaux. On envoie pierre feuille ou ciseaux à son ami qui répond et ensuite les deux sont mis au courant de qui a gagné.
