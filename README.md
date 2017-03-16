@@ -19,3 +19,5 @@ De plus, il doit être possible de pouvoir consulter ses parties précédentes, 
 * Se placer à la racine du dossier
 * Lancer la commande `python3 manage.py runserver`
 * Se rendre sur <http://127.0.0.1:8000> sauf si vous avez modifié ce paramètre dans django
+
+![screen accueuil déconnecté](screenshot/accueil_deconnecte.png)
