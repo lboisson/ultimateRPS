@@ -18,3 +18,4 @@ De plus, il doit être possible de pouvoir consulter ses parties précédentes, 
 * Cloner le dépot `git clone https://github.com/lboisson/ultimateRPS.git`
 * Se placer à la racine du dossier
 * Lancer la commande `python3 manage.py runserver`
+* se rendre sur <127.0.0.1:8000> sauf si vous avez modifié ce paramètre dans django
