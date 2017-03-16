@@ -11,7 +11,8 @@ Le but de ce site est de pouvoir défier ses amis à un pierre feuille ciseaux. 
 * Alizée Duran
 
 ## Installation du projet :
-* Installer python (3.4 ou plus récent de préférence)
+* Installer python (3.4 ou plus récent de préférence) `sudo apt-get install python3`
+* Installer Django <https://docs.djangoproject.com/fr/1.10/topics/install/>
 * Cloner le dépot `git clone https://github.com/lboisson/ultimateRPS.git`
 * Se placer à la racine du dossier
-* Lancer la commande `python manage.py runserver`
+* Lancer la commande `python3 manage.py runserver`
