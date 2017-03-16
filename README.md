@@ -20,4 +20,5 @@ De plus, il doit être possible de pouvoir consulter ses parties précédentes, 
 * Lancer la commande `python3 manage.py runserver`
 * Se rendre sur <http://127.0.0.1:8000> sauf si vous avez modifié ce paramètre dans django
 
+Voici notre page d'accueil lorsque vous n'êtes pas connecté
 ![screen accueuil déconnecté](screenshot/accueil_deconnecte.png)
