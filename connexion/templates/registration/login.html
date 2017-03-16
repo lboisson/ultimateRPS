@@ -9,7 +9,7 @@
 
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}
-<table>
+<table class="table table-bordered">
 <tr>
     <td>{{ form.username.label_tag }}</td>
     <td>{{ form.username }}</td>
@@ -19,9 +19,5 @@
     <td>{{ form.password }}</td>
 </tr>
 </table>
-
-<input type="submit" value="login" />
-<input type="hidden" name="next" value="{{ next }}" />
-</form>
 
 {% endblock %}
