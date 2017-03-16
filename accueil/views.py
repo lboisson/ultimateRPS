@@ -15,7 +15,7 @@ def home(request):
 		return render(request, 'accueil/home.html', {'liste_parties' : parties})
 
 	else :
-		return render(request, 'accueil/home.html')
+		return render(request, 'accueil/deco.html')
 	# else :
 	# 	form = AuthentificationForm()
 	# 	return render(request, 'registration/login.html', {'form':form}, {'redirect_field_name':'/'})
