@@ -6,4 +6,8 @@ from django.forms import ModelForm
 
 def connexion(request):
 	form = AuthentificationForm()
-	return render(request, 'registration/login.html', {'form':form}, {'redirect_field_name':'/'})
+	return render(request, 'registration/login.html', {'form':form})
+
+def deconnexion(request):
+	logout(request, next_page='/')
+	return render(request, '/')
