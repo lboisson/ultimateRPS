@@ -41,7 +41,10 @@ urlpatterns = [
 	url(r'^inscription/$', inscription, name='inscription'), #Inscription
 	url('^', include('django.contrib.auth.urls')), #Pour connexion et déconnexion principalement
     url(r'^logout/$', deconnexion),
+<<<<<<< HEAD
     url(r'^gamesent/(?P<creator>\w+)/(?P<opponent>\w+)/(?P<hand>\w+)/$', views_compte.gamesent,
     name="gamesent"),
 
+=======
+>>>>>>> fd016adc0dfb2ca99a2f3d48f275289ec0d6bffd
 ]
