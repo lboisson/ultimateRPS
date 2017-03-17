@@ -15,18 +15,18 @@ def recherche(request):
     return render(request, 'user/users.html', {'liste_user': user})
 
 
-class UserList(ListView):
-	template_name = 'user/search.html'
+#class UserList(ListView):
+#	template_name = 'user/search.html'
+#
+#	def get_queryset(self):
+#		query = self.request.GET.get('q')
+#		return User.objects.filter(username=query)
 
-	def get_queryset(self):
-		query = self.request.GET.get('q')
-		return User.objects.filter(username=query)
 
 
-
-#def search(request):
-#	if request.GET:
-#		query = request.GET['username']
-#		results = User.objects.filtxer(username__icontaints=query)
-#		return render(request, 'user/search.html', {'results':results})
-#	return render(request, 'user/search.html')
+def search(request):
+	if request.GET:
+		query = request.GET.get('q', None)
+		results = User.objects.filter(username__icontains=query)
+		return render(request, 'user/search.html', {'results':results, 'query':query})
+	return render(request, 'user/search.html', {'query':query})

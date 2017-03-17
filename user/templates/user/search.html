@@ -3,12 +3,14 @@
 {% block content %}
 
 	<h3> Résultats :</h3>
-{% for res in results %}
-    <li>{{res}}</li>
-{% endfor %}
-
-	{% if result == None %}
-	<p> Aucun résultat pour votre recherche. </p> 
-	{% endif %}
+		{% if results != None %}
+			{% for res in results %}
+    			<li>{{res}}</li>
+			{% endfor %}
+		{% endif %}
+		
+		{% if results == None %}
+			<p> Aucun résultat pour votre recherche : {{query}} </p> 
+		{% endif %}
 
 {% endblock %}
