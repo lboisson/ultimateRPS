@@ -49,9 +49,9 @@
           </ul>
         {% endif %}
         <div class=""><span class="pull-right">
-          <form class="navbar-form navbar-right">
+          <form id="search" action="/search/" method="get" class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Recherche">
+              <input type="text" id="searchbox" name="q" class="form-control" placeholder="Recherche">
             </div>
             <button type="submit" class="btn btn-default">Rechercher</button>
           </form>

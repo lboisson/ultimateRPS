@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}UltimateRPS{% endblock %}
+{% block content %}
+
+	<h3> Résultats :</h3>
+{% for res in results %}
+    <li>{{res}}</li>
+{% endfor %}
+
+	{% if result == None %}
+	<p> Aucun résultat pour votre recherche. </p> 
+	{% endif %}
+
+{% endblock %}
