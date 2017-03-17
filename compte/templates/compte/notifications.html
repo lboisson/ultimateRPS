@@ -3,7 +3,9 @@
 {% block content %}
 
 {% for partie in liste_parties %}			
-				
+	
+
+	{%if user.username == partie.Opponent.username%}
 			<div class = "row" style ="padding-top : 10px"></div>
 
 			<div class="row", style="{% cycle 'background-color: #FFFF33;border-radius: 25px;' 'background-color: #66FF33;border-radius: 25px;' 'background-color: #F84533;border-radius: 25px;' 'background-color: #33CCFF;border-radius: 25px;' %}">
@@ -23,12 +25,14 @@
 				</div>
 			</div>
 				
+		
+		{%endif%}
 				
-		{% empty %}
-			<p>Aucune partie</p>
+	{% empty %}
+		<p>Aucune partie</p>
 
 
 
-		{% endfor %}	
+{% endfor %}	
 
 {%endblock%}
