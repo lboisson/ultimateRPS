@@ -70,7 +70,11 @@ class Game(models.Model):
 		#hand : ce que joue le joueur
 		#renvoie la partie
 
-		new_game = Game(Creator=user1, Opponent=user2, CreatorHand=hand)
+
+		GameCreator = User.objects.get(id=user1)
+		GameOpponent = User.objects.get(id=user2)
+
+		new_game = Game(Creator=GameCreator, Opponent=GameOpponent, CreatorHand=hand)
 		new_game.save()
 
 		return new_game

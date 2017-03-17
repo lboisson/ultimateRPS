@@ -11,3 +11,10 @@ def notifications(request):
 	if request.user.is_authenticated():
 		parties = Game.objects.all() 
 		return render(request, 'compte/notifications.html', {'liste_parties' : parties})
+
+def gamesent(request, creator, opponent, hand):
+
+	partie = Game.create_new(creator, opponent, hand)
+
+	return render(request, 'compte/game_sent.html', {'partie' : partie})
+	
