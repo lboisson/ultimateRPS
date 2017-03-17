@@ -40,5 +40,8 @@ urlpatterns = [
     name="recherche"),
 	url(r'^inscription/$', inscription, name='inscription'), #Inscription
 	url('^', include('django.contrib.auth.urls')), #Pour connexion et déconnexion principalement
-    url(r'^logout/$', deconnexion)
+    url(r'^logout/$', deconnexion),
+    url(r'^gamesent/(?P<creator>\w+)/(?P<opponent>\w+)/(?P<hand>\w+)/$', views_compte.gamesent,
+    name="gamesent"),
+
 ]

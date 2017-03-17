@@ -2,30 +2,38 @@
 {% block title %}UltimateRPS{% endblock %}
 {% block content %}
 
-	{% for puser in liste_user %}
+	{%if user.is_authenticated%}
 
-		{%if user.username != puser.username%}
-			<div class = "row" style ="padding-top : 10px"></div>
+		{% for puser in liste_user %}
 
-				<div class="row", style="background-color: #66FF33;border-radius: 25px;">
-					<div class="col-xs-8 col-xs-offset-2">
-						<h3 class="text-center">
-							{{ puser.username }}
-						</h3>
-						<div class="btn-group-justified  btn-group-m  responsive-width">
-						    <a class="btn btn-default" href="#">PIERRE</a>
-						    <a class="btn btn-default" href="#">FEUILLE</a>
-						    <a class="btn btn-default" href="#">CISEAUX</a>
+			{%if user.username != puser.username%}
+				<div class = "row" style ="padding-top : 10px"></div>
+
+					<div class="row", style="background-color: #66FF33;border-radius: 25px;">
+						<div class="col-xs-8 col-xs-offset-2">
+							<h3 class="text-center">
+								{{ puser.username }}
+							</h3>
+							<div class="btn-group-justified  btn-group-m  responsive-width">
+							    <a class="btn btn-default" href="/gamesent/{{user.id}}/{{puser.id}}/ROCK">PIERRE</a>
+							    <a class="btn btn-default" href="/gamesent/{{user.id}}/{{puser.id}}/PAPER">FEUILLE</a>
+							    <a class="btn btn-default" href="/gamesent/{{user.id}}/{{puser.id}}/SCISSORS">CISEAUX</a>
+							</div>
+
 						</div>
-
 					</div>
-				</div>
-		{% endif%}
-		
+			{% endif%}
 			
-	{% empty %}
-	    <p>pas d'users</p>
-	{% endfor %}
+				
+		{% empty %}
+		    <p>pas d'users</p>
+		{% endfor %}
+
+	{%else %}
+
+		<h1 class="text-center">Vous devez être connecté(e) pour voir les copains/copines !</h1>
+
+	{%endif%}
 
 {%endblock%}
 
