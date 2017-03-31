@@ -13,8 +13,10 @@ De plus, il doit être possible de pouvoir consulter ses parties précédentes, 
 * Alizée Duran
 
 ## Installation du projet :
-* Installer python (3.4 ou plus récent de préférence) `sudo apt-get install python3`
-* Installer Django <https://docs.djangoproject.com/fr/1.10/topics/install/>
+* Installer python (3.4 ou plus récent de préférence) `sudo apt install python3`
+* Installer virtualenv `pip install virtualenv`
+* Créer un environnement virtuel `virtualenv -p /usr/bin/python3 [nom de votre environnement]`
+* Activer l'environnement `. ./[nom de votre environnement]/bin/activate`
 * Cloner le dépot `git clone https://github.com/lboisson/ultimateRPS.git`
 * Se placer à la racine du dossier
 * Lancer la commande `python3 manage.py runserver`
